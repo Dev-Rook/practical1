@@ -1,347 +1,379 @@
 a {
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  .Nav {
-    border: 1px solid black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.Nav {
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  height: auto;
+  width: 100%;
+
+  z-index: 10;
+
+  .NavWrapper {
     display: flex;
-    flex-direction: column;
-  
-    padding: 5px;
-    justify-content: space-between;
-    align-items: center;
-  
-    position: fixed;
-    top: 0px;
-    left: 0px;
-  
-    height: auto;
     width: 100%;
-  
-    z-index: 10;
-  
-    .NavWrapper {
+    justify-content: space-between;
+
+    .LeftSection {
       display: flex;
-      width: 100%;
-      justify-content: space-between;
-  
-      .LeftSection {
+
+      padding: 5px;
+      gap: 30px;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .LogoContainer {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        border-radius: 50%;
+
         display: flex;
-  
-        padding: 5px;
-        gap: 30px;
-        justify-content: space-evenly;
-        align-items: center;
-  
-        .LogoContainer {
-          border: 1px solid black;
-          border-radius: 50%;
-  
-          display: flex;
-  
-          height: 40px;
-          width: 40px;
-          overflow: hidden;
-  
-          .Logo {
-            margin: auto;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-          }
-        }
-  
-        .NavLinkContainer {
-          display: flex;
-  
-          padding: 5px;
-          gap: 30px;
-          justify-content: space-between;
-          align-items: center;
-  
-          .NavLinkItem {
-            display: flex;
-            gap: 3px;
-  
-            .NavLink {
-              color: black;
-              font-family: sans-serif;
-              font-size: 15px;
-              font-weight: 400;
-  
-              margin: auto;
-            }
-          }
+
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+
+        .Logo {
+          margin: auto;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
         }
       }
-  
-      .RightSection {
+
+      .NavLinkContainer {
         display: flex;
-  
+
         padding: 5px;
         gap: 30px;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-  
-        .SearchContainer {
-          border: 1px solid black;
-  
+
+        .NavLinkItem {
           display: flex;
-  
-          padding: 5px;
-          gap: 10px;
-          justify-content: space-evenly;
-          align-items: center;
-          transition: 0.5s;
-  
-          .Search {
-            outline: none;
-            // background-color: rgba(0, 0, 0, 0.5);
-            border: 1px solid black;
-  
-            padding: 8px;
-  
-            color: black;
-            font-family: sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-          }
-          ::placeholder {
-            color: black;
+          gap: 3px;
+
+          .NavLink {
+            color: white;
             font-family: sans-serif;
             font-size: 15px;
             font-weight: 400;
-          }
-        }
-  
-        .MembershipLink {
-          color: black;
-          font-family: sans-serif;
-          font-size: 15px;
-          font-weight: 400;
-  
-          margin: auto;
-        }
-  
-        .ArticlesButton {
-          border: 3px solid black;
-          background: none;
-          display: flex;
-  
-          padding: 10px;
-          outline: none;
-          transition: 0.5s;
-  
-          .ButtonText {
-            color: black;
-            font-family: sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-  
+
             margin: auto;
           }
         }
-  
-        .ArticlesButton:hover {
-          background-color: black;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-            rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        }
-        .ArticlesButton:hover .ButtonText {
-          color: white;
-        }
-  
-        .MenuWrapper {
-          display: none;
-          transform: translateX(100vw);
-          transition: 0.5s;
-        }
       }
     }
-  
-    .ResponsiveSearchContainer {
-      border: 1px solid black;
-  
+
+    .RightSection {
       display: flex;
-  
+
       padding: 5px;
-      gap: 10px;
+      gap: 30px;
       justify-content: space-evenly;
       align-items: center;
-  
-      width: 100%;
-  
-      display: none;
-      transition: 0.5s;
-  
-      .ResponsiveSearch {
-        outline: none;
-        border: 1px solid black;
-        width: 90%;
-  
-        padding: 8px;
-  
-        color: black;
+
+      .SearchContainer {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        background-color: rgba(0, 0, 0, 0.5);
+
+
+        display: flex;
+
+        padding: 5px;
+        gap: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.5s;
+
+        .Search {
+          outline: none;
+          background-color: rgba(0, 0, 0, 0.5);
+          border: 1px solid black;
+
+          padding: 8px;
+
+          color: white;
+          font-family: sans-serif;
+          font-size: 15px;
+          font-weight: 400;
+        }
+        ::placeholder {
+          color: white;
+          font-family: sans-serif;
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+
+      .MembershipLink {
+        color: white;
         font-family: sans-serif;
         font-size: 15px;
         font-weight: 400;
+
+        margin: auto;
+      }
+
+      .ArticlesButton {
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+
+        padding: 10px;
+        outline: none;
+        cursor: pointer;
+
+        transition: 0.5s;
+
+        .ButtonText {
+          color: white;
+          font-family: sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+
+          margin: auto;
+        }
+      }
+
+      .ArticlesButton:hover {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+      .ArticlesButton:hover .ButtonText {
+        color: black;
+      }
+
+      .MenuWrapper {
+        display: none;
+        transform: translateX(100vw);
+        transition: 0.5s;
       }
     }
-  
-    .MobileMenu {
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-      background-color: rgb(250, 243, 230);
-  
+  }
+
+  .ResponsiveSearchContainer {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+
+    padding: 5px;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+
+    display: none;
+    transition: 0.5s;
+
+    .ResponsiveSearch {
+      outline: none;
+      border: 1px solid black;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 90%;
+
+      padding: 8px;
+
+      color: white;
+      font-family: sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+
+  .MobileMenu {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 50%;
+
+    transition: 0.5s;
+    transform: translateX(100%);
+    z-index: 100;
+
+    .CloseIcon {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .Mobile_NavLink_Container {
       display: flex;
       flex-direction: column;
-  
-      position: absolute;
-      top: 0px;
-      right: 0px;
-  
-      justify-content: center;
-      align-items: center;
-  
-      height: 100vh;
-      width: 50%;
-  
-      transition: 0.5s;
-      transform: translateX(100%);
-      z-index: 100;
-  
-      .CloseIcon {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-      }
-  
-      .Mobile_NavLink_Container {
+
+      padding-left: 10px;
+      padding-right: 10px;
+      // justify-content: space-between;
+      // align-items: center;
+
+      height: 90%;
+      width: 100%;
+
+      // overflow-y: scroll;
+
+      .Mobile_NavLink_Item {
+        border-bottom: 1px solid black;
+
         display: flex;
-        flex-direction: column;
-  
-        padding-left: 10px;
-        padding-right: 10px;
-        // justify-content: space-between;
-        // align-items: center;
-  
-        height: 90%;
-        width: 100%;
-  
-        // overflow-y: scroll;
-  
-        .Mobile_NavLink_Item {
-          border-bottom: 1px solid black;
-  
+
+        margin: auto;
+
+        justify-content: space-between;
+        padding-bottom: 10px;
+
+        width: 90%;
+
+        span {
           display: flex;
-  
-          margin: auto;
-  
-          justify-content: space-between;
-          padding-bottom: 10px;
-  
-          width: 90%;
-  
-          span {
+          flex-direction: column;
+          gap: 5px;
+          transition: 0.5s;
+
+          .InfoBox {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 20px;
+            padding-left: 10px;
+
+            display: none;
             transition: 0.5s;
-  
-            .InfoBox {
+          }
+
+          .ActiveAccordion {
+            display: block;
+          }
+
+          .InfoList {
+            .InfoListItem {
               display: flex;
-              flex-direction: column;
-              gap: 20px;
-              padding-left: 10px;
-  
-  
-              display: none;
-              transition: 0.5s;
-            }
-  
-            .ActiveAccordion {
-              display: block;
-            }
-  
-            .InfoList {
-              .InfoListItem {
-                display: flex;
-                gap: 3px;
-  
-                .InfoLink {
-                  color: black;
-                  font-family: sans-serif;
-                  font-size: 18px;
-                  font-weight: 400;
-                }
+              gap: 3px;
+
+              .InfoLink {
+                color: black;
+                font-family: sans-serif;
+                font-size: 18px;
+                font-weight: 400;
               }
             }
           }
-  
-          .Mobile_NavLink {
-            display: flex;
-            gap: 3px;
-  
-            color: black;
-            font-family: sans-serif;
-            font-size: 20px;
-            font-weight: 400;
-          }
+        }
+
+        .Mobile_NavLink {
+          display: flex;
+          gap: 3px;
+
+          color: white;
+          font-family: sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+        }
+
+        .icon {
+          color: white;
         }
       }
     }
-  
-    .RevealMenu {
-      transform: translateX(0%);
-    }
   }
-  
-  @media only screen and (max-width: 1050px) {
-    .Nav {
-      .NavWrapper {
-        .LeftSection {
-          .NavLinkContainer {
-            display: none;
-          }
+
+  .RevealMenu {
+    transform: translateX(0%);
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .Nav {
+    .NavWrapper {
+      .LeftSection {
+        .NavLinkContainer {
+          display: none;
         }
       }
     }
-  
-    .Nav {
-      .NavWrapper {
-        .RightSection {
-          gap: 10px;
-          .SearchContainer {
-            display: none;
-          }
-          .MembershipLink {
-            display: none;
-          }
-  
-          .MenuWrapper {
-            display: flex;
-            transform: translateX(0);
-          }
+  }
+
+  .Nav {
+    .NavWrapper {
+      .RightSection {
+        gap: 10px;
+        .SearchContainer {
+          display: none;
+        }
+        .MembershipLink {
+          display: none;
+        }
+
+        .MenuWrapper {
+          display: flex;
+          transform: translateX(0);
         }
       }
-      .ResponsiveSearchContainer {
-        display: flex;
-      }
+    }
+    .ResponsiveSearchContainer {
+      display: flex;
     }
   }
-  
-  @media only screen and (min-width: 1051px) {
-    .Nav {
-      .MobileMenu {
-        display: none;
-      }
+}
+
+@media only screen and (min-width: 1051px) {
+  .Nav {
+    .MobileMenu {
+      display: none;
     }
   }
-  
+}
+
+@media only screen and (max-width: 515px) {
+  .Nav {
+    .MobileMenu {
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .Nav {
+    .MobileMenu {
+      width: 100%;
+    }
+  }
+}

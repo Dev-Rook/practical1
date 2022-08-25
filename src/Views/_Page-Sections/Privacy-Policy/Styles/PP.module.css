@@ -1,0 +1,52 @@
+.PP__Section {
+  display: flex;
+  background-color: #faf3e6;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  width: 100%;
+}
+.PP__Section .PP__Contents {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px;
+  gap: 20px;
+}
+.PP__Section .PP__Contents .PP_Image {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+}
+.PP__Section .PP__Contents .PP__Box {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px;
+  gap: 20px;
+  width: 320px;
+}
+.PP__Section .PP__Contents .PP__Box .PP_Text {
+  color: black;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: auto;
+  text-align: left;
+}
+.PP__Section .PP__Contents .PP__Box .PP__Button {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  margin: auto;
+  margin-left: 0px;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}/*# sourceMappingURL=PP.module.css.map */

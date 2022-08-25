@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 // import { GlobalContext } from "../../Context/GlobalContext";
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 // import Accordion from "react-bootstrap/Accordion";
 
 import styles from "./Styles/Nav.module.css";
@@ -58,31 +59,31 @@ const Nav = () => {
       <div className={styles.NavWrapper}>
         <div className={styles.LeftSection}>
           <div className={styles.LogoContainer}>
-            <img src={""} alt="" className={styles.Logo} />
+            <img src={require("../../Assets/Images/Brown-Topography-Map.jpg")} alt="" className={styles.Logo} />
           </div>
 
           <ul className={styles.NavLinkContainer}>
             <li className={styles.NavLinkItem}>
-              <a href="#" target="_blank" className={styles.NavLink}>
+              <Link to="/" className={styles.NavLink}>
                 Home
-              </a>
+              </Link>
             </li>
             <li className={styles.NavLinkItem}>
-              <a href="#" target="_blank" className={styles.NavLink}>
+              <Link to="About" className={styles.NavLink}>
                 About
-              </a>
+              </Link>
               <KeyboardArrowDownIcon sx={{ fontSize: 18 }} />
             </li>
             <li className={styles.NavLinkItem}>
-              <a href="#" target="_blank" className={styles.NavLink}>
+              <Link to="PP" className={styles.NavLink}>
                 Privacy & Policy
-              </a>
+              </Link>
               <KeyboardArrowDownIcon sx={{ fontSize: 18 }} />
             </li>
             <li className={styles.NavLinkItem}>
-              <a href="#" target="_blank" className={styles.NavLink}>
+              <Link to="#" className={styles.NavLink}>
                 Contact
-              </a>
+              </Link>
               <KeyboardArrowDownIcon sx={{ fontSize: 18 }} />
             </li>
           </ul>
@@ -97,9 +98,9 @@ const Nav = () => {
             />
           </div>
 
-          <a href="#" className={styles.MembershipLink}>
-            Membership
-          </a>
+          <Link to="#" className={styles.MembershipLink}>
+            Login
+          </Link>
 
           <button className={styles.ArticlesButton}>
             <p className={styles.ButtonText}>Articles</p>
@@ -138,44 +139,44 @@ const Nav = () => {
 
         <ul className={styles.Mobile_NavLink_Container}>
           <li className={styles.Mobile_NavLink_Item}>
-            <a href="#" className={styles.Mobile_NavLink}>
+            <Link to="/" className={styles.Mobile_NavLink}>
               Home
-            </a>
+            </Link>
 
-            <HomeIcon />
+            <HomeIcon className={styles.icon} />
           </li>
           <li className={styles.Mobile_NavLink_Item}>
             <span>
-              <a
+              <Link
                 onClick={activeAccordion1}
-                href="#"
+                to="About"
                 className={styles.Mobile_NavLink}
               >
                 About <KeyboardArrowDownIcon />
-              </a>
+              </Link>
             </span>
 
-            <InfoIcon />
+            <InfoIcon className={styles.icon} />
           </li>
           <li className={styles.Mobile_NavLink_Item}>
             <span>
-              <a
+              <Link
                 onClick={activeAccordion2}
-                href="#"
+                to="PP"
                 className={styles.Mobile_NavLink}
               >
                 Privacy & Policy <KeyboardArrowDownIcon />
-              </a>
+              </Link>
             </span>
 
-            <TourIcon />
+            <TourIcon className={styles.icon} />
           </li>
           <li className={styles.Mobile_NavLink_Item}>
-            <a href="#" className={styles.Mobile_NavLink}>
-              Contact
-            </a>
+            <Link to="Login" className={styles.Mobile_NavLink}>
+              Login
+            </Link>
 
-            <CallIcon />
+            <CallIcon className={styles.icon} />
           </li>
         </ul>
       </div>

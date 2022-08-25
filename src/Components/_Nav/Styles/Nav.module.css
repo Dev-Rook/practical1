@@ -9,6 +9,7 @@ ul {
 
 .Nav {
   border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   padding: 5px;
@@ -34,7 +35,7 @@ ul {
   align-items: center;
 }
 .Nav .NavWrapper .LeftSection .LogoContainer {
-  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 50%;
   display: flex;
   height: 40px;
@@ -60,7 +61,7 @@ ul {
   gap: 3px;
 }
 .Nav .NavWrapper .LeftSection .NavLinkContainer .NavLinkItem .NavLink {
-  color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -74,7 +75,8 @@ ul {
   align-items: center;
 }
 .Nav .NavWrapper .RightSection .SearchContainer {
-  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   padding: 5px;
   gap: 10px;
@@ -84,59 +86,60 @@ ul {
 }
 .Nav .NavWrapper .RightSection .SearchContainer .Search {
   outline: none;
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid black;
   padding: 8px;
-  color: black;
+  color: white;
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
 }
 .Nav .NavWrapper .RightSection .SearchContainer ::-moz-placeholder {
-  color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 15px;
   font-weight: 400;
 }
 .Nav .NavWrapper .RightSection .SearchContainer :-ms-input-placeholder {
-  color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 15px;
   font-weight: 400;
 }
 .Nav .NavWrapper .RightSection .SearchContainer ::placeholder {
-  color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 15px;
   font-weight: 400;
 }
 .Nav .NavWrapper .RightSection .MembershipLink {
-  color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 15px;
   font-weight: 400;
   margin: auto;
 }
 .Nav .NavWrapper .RightSection .ArticlesButton {
-  border: 3px solid black;
-  background: none;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   padding: 10px;
   outline: none;
+  cursor: pointer;
   transition: 0.5s;
 }
 .Nav .NavWrapper .RightSection .ArticlesButton .ButtonText {
-  color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 400;
   margin: auto;
 }
 .Nav .NavWrapper .RightSection .ArticlesButton:hover {
-  background-color: black;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .Nav .NavWrapper .RightSection .ArticlesButton:hover .ButtonText {
-  color: white;
+  color: black;
 }
 .Nav .NavWrapper .RightSection .MenuWrapper {
   display: none;
@@ -144,7 +147,8 @@ ul {
   transition: 0.5s;
 }
 .Nav .ResponsiveSearchContainer {
-  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   padding: 5px;
   gap: 10px;
@@ -157,16 +161,17 @@ ul {
 .Nav .ResponsiveSearchContainer .ResponsiveSearch {
   outline: none;
   border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 90%;
   padding: 8px;
-  color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 15px;
   font-weight: 400;
 }
 .Nav .MobileMenu {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  background-color: rgb(250, 243, 230);
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -181,6 +186,7 @@ ul {
   z-index: 100;
 }
 .Nav .MobileMenu .CloseIcon {
+  color: white;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -231,10 +237,13 @@ ul {
 .Nav .MobileMenu .Mobile_NavLink_Container .Mobile_NavLink_Item .Mobile_NavLink {
   display: flex;
   gap: 3px;
-  color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 400;
+}
+.Nav .MobileMenu .Mobile_NavLink_Container .Mobile_NavLink_Item .icon {
+  color: white;
 }
 .Nav .RevealMenu {
   transform: translateX(0%);
@@ -264,5 +273,15 @@ ul {
 @media only screen and (min-width: 1051px) {
   .Nav .MobileMenu {
     display: none;
+  }
+}
+@media only screen and (max-width: 515px) {
+  .Nav .MobileMenu {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .Nav .MobileMenu {
+    width: 100%;
   }
 }/*# sourceMappingURL=Nav.module.css.map */

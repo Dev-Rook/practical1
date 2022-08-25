@@ -1,0 +1,62 @@
+.Hero {
+  display: flex;
+  background-image: url("../../../../Assets/Images/Skull-Bones.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  width: 100%;
+}
+.Hero .Diffuser {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.Hero .Diffuser .Membership__Box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+  width: 320px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.Hero .Diffuser .Membership__Box .Membership_Text {
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.Hero .Diffuser .Membership__Box .Membership__Button {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  margin: 0 auto;
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: auto;
+  margin-left: 0px;
+}
+
+@media only screen and (max-width: 360px) {
+  .Hero .Diffuser .Membership__Box {
+    margin: auto;
+    width: 90%;
+  }
+  .Hero .Diffuser .Membership__Box .Membership_Text {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=Hero.module.css.map */
