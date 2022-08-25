@@ -18,6 +18,7 @@
   border-radius: 50%;
   display: flex;
   margin: auto;
+  transition: 0.5s;
 }
 .About .About__Contents .About__Box {
   display: flex;
@@ -48,4 +49,22 @@
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 996px) {
+  .About .About__Contents {
+    flex-direction: column;
+  }
+  .About .About__Contents .About__Box .About_Text {
+    text-align: center;
+  }
+  .About .About__Contents .About__Box .About__Button {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .About .About__Contents .About_Image {
+    height: 300px;
+    width: 300px;
+  }
 }/*# sourceMappingURL=About.module.css.map */

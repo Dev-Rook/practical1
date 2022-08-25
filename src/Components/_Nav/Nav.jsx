@@ -59,7 +59,11 @@ const Nav = () => {
       <div className={styles.NavWrapper}>
         <div className={styles.LeftSection}>
           <div className={styles.LogoContainer}>
-            <img src={require("../../Assets/Images/Brown-Topography-Map.jpg")} alt="" className={styles.Logo} />
+            <img
+              src={require("../../Assets/Images/Brown-Topography-Map.jpg")}
+              alt=""
+              className={styles.Logo}
+            />
           </div>
 
           <ul className={styles.NavLinkContainer}>
@@ -139,7 +143,11 @@ const Nav = () => {
 
         <ul className={styles.Mobile_NavLink_Container}>
           <li className={styles.Mobile_NavLink_Item}>
-            <Link to="/" className={styles.Mobile_NavLink}>
+            <Link
+              onClick={openMobileMenu}
+              to="/"
+              className={styles.Mobile_NavLink}
+            >
               Home
             </Link>
 
@@ -148,7 +156,7 @@ const Nav = () => {
           <li className={styles.Mobile_NavLink_Item}>
             <span>
               <Link
-                onClick={activeAccordion1}
+                onClick={openMobileMenu}
                 to="About"
                 className={styles.Mobile_NavLink}
               >
@@ -161,7 +169,7 @@ const Nav = () => {
           <li className={styles.Mobile_NavLink_Item}>
             <span>
               <Link
-                onClick={activeAccordion2}
+                onClick={openMobileMenu}
                 to="PP"
                 className={styles.Mobile_NavLink}
               >
@@ -172,7 +180,11 @@ const Nav = () => {
             <TourIcon className={styles.icon} />
           </li>
           <li className={styles.Mobile_NavLink_Item}>
-            <Link to="Login" className={styles.Mobile_NavLink}>
+            <Link
+              onClick={openMobileMenu}
+              to="Login"
+              className={styles.Mobile_NavLink}
+            >
               Login
             </Link>
 

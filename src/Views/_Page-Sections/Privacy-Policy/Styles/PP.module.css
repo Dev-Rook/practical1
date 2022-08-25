@@ -19,6 +19,7 @@
   border-radius: 50%;
   display: flex;
   margin: auto;
+  transition: 0.5s;
 }
 .PP__Section .PP__Contents .PP__Box {
   display: flex;
@@ -49,4 +50,22 @@
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 996px) {
+  .PP__Section .PP__Contents {
+    flex-direction: column;
+  }
+  .PP__Section .PP__Contents .PP__Box .PP_Text {
+    text-align: center;
+  }
+  .PP__Section .PP__Contents .PP__Box .PP__Button {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .PP .PP__Contents .PP_Image {
+    height: 300px;
+    width: 300px;
+  }
 }/*# sourceMappingURL=PP.module.css.map */

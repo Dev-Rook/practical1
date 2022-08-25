@@ -1,76 +1,103 @@
-
-
 .PP__Section {
+  display: flex;
+
+  background-color: #faf3e6;
+
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+
+  height: 100vh;
+  width: 100%;
+
+  .PP__Contents {
     display: flex;
-  
-    background-color: #faf3e6;
-  
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  
-    margin: auto;
-  
-    height: 100vh;
-    width: 100%;
-  
-    .PP__Contents {
+    flex-direction: row-reverse;
+    padding: 10px;
+    gap: 20px;
+
+    .PP_Image {
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      border-radius: 50%;
+
       display: flex;
-      flex-direction: row-reverse;
+      margin: auto;
+
+      transition: .5s;
+    }
+
+    .PP__Box {
+      display: flex;
+      flex-direction: column;
+
+      margin: auto;
+
       padding: 10px;
       gap: 20px;
-  
-      .PP_Image {
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          border-radius: 50%;
-  
-          display: flex;
-          margin: auto;
-      }
-  
-      .PP__Box {
-        display: flex;
-        flex-direction: column;
-  
+
+      width: 320px;
+
+      .PP_Text {
+        color: black;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+
         margin: auto;
-  
+        text-align: left;
+      }
+
+      .PP__Button {
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+
+        margin: auto;
+        margin-left: 0px;
+
         padding: 10px;
-        gap: 20px;
-  
-        width: 320px;
-  
+        outline: none;
+        cursor: pointer;
+
+        transition: 0.5s;
+
+        color: white;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .PP__Section {
+    .PP__Contents {
+      flex-direction: column;
+
+      .PP__Box {
         .PP_Text {
-          color: black;
-          font-family: sans-serif;
-          font-size: 20px;
-          font-weight: 400;
-  
-          margin: auto;
-          text-align: left;
+          text-align: center;
         }
-  
+
         .PP__Button {
-          background-color: rgba(0, 0, 0, 0.5);
-          display: flex;
-  
           margin: auto;
-          margin-left: 0px;
-  
-          padding: 10px;
-          outline: none;
-          cursor: pointer;
-  
-          transition: 0.5s;
-  
-  
-          color: white;
-          font-family: sans-serif;
-          font-size: 20px;
-          font-weight: 400;
         }
       }
     }
   }
-  
+}
+
+@media only screen and (max-width: 650px) {
+  .PP {
+    .PP__Contents {
+      .PP_Image {
+        height: 300px;
+        width: 300px;
+      }
+    }
+  }
+}

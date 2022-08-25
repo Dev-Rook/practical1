@@ -21,10 +21,12 @@
       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        border-radius: 50%;
+      border-radius: 50%;
 
-        display: flex;
-        margin: auto;
+      display: flex;
+      margin: auto;
+
+      transition: .5s;
     }
 
     .About__Box {
@@ -61,11 +63,39 @@
 
         transition: 0.5s;
 
-
         color: white;
         font-family: sans-serif;
         font-size: 20px;
         font-weight: 400;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .About {
+    .About__Contents {
+      flex-direction: column;
+
+      .About__Box {
+        .About_Text {
+          text-align: center;
+        }
+
+        .About__Button {
+            margin: auto;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .About {
+    .About__Contents {
+      .About_Image {
+        height: 300px;
+        width: 300px;
       }
     }
   }
