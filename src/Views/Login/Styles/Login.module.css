@@ -1,6 +1,5 @@
 .Login {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.5);
   position: relative;
   justify-content: center;
   align-items: center;
@@ -31,6 +30,15 @@
   color: white;
   font-size: 15px;
   font-family: sans-serif;
+}
+.Login .Login__Form fieldset ::-moz-placeholder {
+  color: white;
+}
+.Login .Login__Form fieldset :-ms-input-placeholder {
+  color: white;
+}
+.Login .Login__Form fieldset ::placeholder {
+  color: white;
 }
 .Login .Login__Form .Submit_Button {
   background-color: rgba(0, 0, 0, 0.5);

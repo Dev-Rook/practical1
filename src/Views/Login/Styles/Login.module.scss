@@ -1,7 +1,6 @@
 .Login {
   display: flex;
 
-  background-color: rgba(0, 0, 0, 0.5);
 
   position: relative;
   justify-content: center;
@@ -42,6 +41,10 @@
         color: white;
         font-size: 15px;
         font-family: sans-serif;
+      }
+
+      ::placeholder {
+        color: white;
       }
     }
 
