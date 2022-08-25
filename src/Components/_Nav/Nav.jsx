@@ -94,7 +94,7 @@ const Nav = () => {
         </div>
         <div className={styles.RightSection}>
           <div className={styles.SearchContainer}>
-            <SearchIcon />
+            <SearchIcon className={styles.SearchIcon} />
             <input
               placeholder="Search..."
               type="text"
@@ -102,7 +102,7 @@ const Nav = () => {
             />
           </div>
 
-          <Link to="#" className={styles.MembershipLink}>
+          <Link to="Login" className={styles.MembershipLink}>
             Login
           </Link>
 
@@ -120,7 +120,7 @@ const Nav = () => {
         </div>
       </div>
       <div className={styles.ResponsiveSearchContainer}>
-        <SearchIcon />
+        <SearchIcon className={styles.SearchIcon} />
         <input
           placeholder="Search..."
           type="text"
