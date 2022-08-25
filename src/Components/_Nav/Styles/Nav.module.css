@@ -1,0 +1,268 @@
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.Nav {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: auto;
+  width: 100%;
+  z-index: 10;
+}
+.Nav .NavWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.Nav .NavWrapper .LeftSection {
+  display: flex;
+  padding: 5px;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Nav .NavWrapper .LeftSection .LogoContainer {
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+}
+.Nav .NavWrapper .LeftSection .LogoContainer .Logo {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Nav .NavWrapper .LeftSection .NavLinkContainer {
+  display: flex;
+  padding: 5px;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.Nav .NavWrapper .LeftSection .NavLinkContainer .NavLinkItem {
+  display: flex;
+  gap: 3px;
+}
+.Nav .NavWrapper .LeftSection .NavLinkContainer .NavLinkItem .NavLink {
+  color: black;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: auto;
+}
+.Nav .NavWrapper .RightSection {
+  display: flex;
+  padding: 5px;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Nav .NavWrapper .RightSection .SearchContainer {
+  border: 1px solid black;
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.5s;
+}
+.Nav .NavWrapper .RightSection .SearchContainer .Search {
+  outline: none;
+  border: 1px solid black;
+  padding: 8px;
+  color: black;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.Nav .NavWrapper .RightSection .SearchContainer ::-moz-placeholder {
+  color: black;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.Nav .NavWrapper .RightSection .SearchContainer :-ms-input-placeholder {
+  color: black;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.Nav .NavWrapper .RightSection .SearchContainer ::placeholder {
+  color: black;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.Nav .NavWrapper .RightSection .MembershipLink {
+  color: black;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: auto;
+}
+.Nav .NavWrapper .RightSection .ArticlesButton {
+  border: 3px solid black;
+  background: none;
+  display: flex;
+  padding: 10px;
+  outline: none;
+  transition: 0.5s;
+}
+.Nav .NavWrapper .RightSection .ArticlesButton .ButtonText {
+  color: black;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: auto;
+}
+.Nav .NavWrapper .RightSection .ArticlesButton:hover {
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.Nav .NavWrapper .RightSection .ArticlesButton:hover .ButtonText {
+  color: white;
+}
+.Nav .NavWrapper .RightSection .MenuWrapper {
+  display: none;
+  transform: translateX(100vw);
+  transition: 0.5s;
+}
+.Nav .ResponsiveSearchContainer {
+  border: 1px solid black;
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  display: none;
+  transition: 0.5s;
+}
+.Nav .ResponsiveSearchContainer .ResponsiveSearch {
+  outline: none;
+  border: 1px solid black;
+  width: 90%;
+  padding: 8px;
+  color: black;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.Nav .MobileMenu {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: rgb(250, 243, 230);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  transition: 0.5s;
+  transform: translateX(100%);
+  z-index: 100;
+}
+.Nav .MobileMenu .CloseIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.Nav .MobileMenu .Mobile_NavLink_Container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 90%;
+  width: 100%;
+}
+.Nav .MobileMenu .Mobile_NavLink_Container .Mobile_NavLink_Item {
+  border-bottom: 1px solid black;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  width: 90%;
+}
+.Nav .MobileMenu .Mobile_NavLink_Container .Mobile_NavLink_Item span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: 0.5s;
+}
+.Nav .MobileMenu .Mobile_NavLink_Container .Mobile_NavLink_Item span .InfoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 10px;
+  display: none;
+  transition: 0.5s;
+}
+.Nav .MobileMenu .Mobile_NavLink_Container .Mobile_NavLink_Item span .ActiveAccordion {
+  display: block;
+}
+.Nav .MobileMenu .Mobile_NavLink_Container .Mobile_NavLink_Item span .InfoList .InfoListItem {
+  display: flex;
+  gap: 3px;
+}
+.Nav .MobileMenu .Mobile_NavLink_Container .Mobile_NavLink_Item span .InfoList .InfoListItem .InfoLink {
+  color: black;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.Nav .MobileMenu .Mobile_NavLink_Container .Mobile_NavLink_Item .Mobile_NavLink {
+  display: flex;
+  gap: 3px;
+  color: black;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.Nav .RevealMenu {
+  transform: translateX(0%);
+}
+
+@media only screen and (max-width: 1050px) {
+  .Nav .NavWrapper .LeftSection .NavLinkContainer {
+    display: none;
+  }
+  .Nav .NavWrapper .RightSection {
+    gap: 10px;
+  }
+  .Nav .NavWrapper .RightSection .SearchContainer {
+    display: none;
+  }
+  .Nav .NavWrapper .RightSection .MembershipLink {
+    display: none;
+  }
+  .Nav .NavWrapper .RightSection .MenuWrapper {
+    display: flex;
+    transform: translateX(0);
+  }
+  .Nav .ResponsiveSearchContainer {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1051px) {
+  .Nav .MobileMenu {
+    display: none;
+  }
+}/*# sourceMappingURL=Nav.module.css.map */
